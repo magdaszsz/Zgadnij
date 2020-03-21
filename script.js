@@ -14,17 +14,37 @@ const wrong = document.querySelector('.wrong');
 const blank = document.querySelector('.blank');
 let clicked = false;
 
+/********* function shuffeling an array********/
+
+function shuffleArray(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
 /************ close pop up *********** */
 for(let modal of closeModal) {
   modal.addEventListener('click', function(e){
-    e.target.parentNode.classList.remove('showModal');
+    e.target.parentNode.parentNode.classList.remove('showModal');
   }
   )
 }
 
+/*************** clear input***********/
+
 const clearInput = function() {
   userInput.value= '';
 }
+
+/************* reload page************/
+
+reload.addEventListener('click', function() {
+  window.location.reload();
+})
+
+/************ start game at enter ********/
 
 userInput.addEventListener('keydown', function(e) {
   if(e.keyCode === 13) {
@@ -32,6 +52,8 @@ userInput.addEventListener('keydown', function(e) {
     clearInput();
   }
  })
+
+
 
 button.addEventListener('click', function() {
   if(!clicked) {
@@ -50,7 +72,7 @@ let pair = [];
 
 let scrambledWord = '';
 
-
+/************** get a random word and a hint *****/
 const randomizeWords = function() {
   let randomIndex = Math.floor(Math.random() * words.length);
   let word = words[randomIndex];
@@ -61,13 +83,7 @@ const randomizeWords = function() {
   pair.push(hint);
 }
 
-function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-}
+/********* display the word and the hint ***********/
 
 const displayWords = function() {
   scrambledWord = pair[0].split('');
@@ -76,35 +92,7 @@ const displayWords = function() {
   message.innerHTML = `<h1>${pair[1]}</h1>`;
   }
 
-
-/*function shuffleArray(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-  }
-return array;
-}*/
-
-const checkArray = function() {
-  if(words.length === 0) {
-    game.classList.add('show');
-  }
-}
-
-
-
-/*const shuffleArray = function(array) {
-  const a = array.slice();
-
-  for (let i = a.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [a[i], a[j]] = [a[j], a[i]];
-  }
-
-  return a;
-};
-
-console.log(shuffleArray(words));*/
+/********* check if the anwser is correct**************/
 const checkAnwser = function() {
   if(userInput.value === pair[0]) {
     word.innerHTML = `<h1>${pair[0]}</h1`;
@@ -118,14 +106,15 @@ const checkAnwser = function() {
   } else {
     wrong.classList.add('showModal');
   }
- 
 }
 
-/************* reload page************/
+ /************* end the game if all the words have been shown ********/
 
-reload.addEventListener('click', function() {
-  window.location.reload();
-})
+ const checkArray = function() {
+  if(words.length === 0) {
+    game.classList.add('show');
+  }
+}
 
 
 
