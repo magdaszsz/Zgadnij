@@ -1,5 +1,5 @@
-const words = ['szezlong', 'szlafrok', 'awokado', 'czekolada'];
-const hints = ['Słowo z francuskiego oznaczające \'długie krzesło\'', 'Słowo z niemieckiego oznaczające \'marynarka do spania\'', 'Ten superfood stał się żyłą złota dla południowoamerykańskich karteli', 'Z języka nahuatl, może być biała, deserowa, nadziewana'];
+const words = ['szezlong', 'szlafrok', 'awokado', 'czekolada', 'hejnał', 'czajnik', 'kajzerka', 'beszamel', 'szmizjerka'];
+const hints = ['Słowo z francuskiego oznaczające \'długie krzesło\'', 'Słowo z niemieckiego oznaczające \'marynarka do spania\'', 'Ten superfood stał się żyłą złota dla południowoamerykańskich karteli', 'Z języka nahuatl - może być biała, deserowa, nadziewana', 'Z węgierskiego - robrzmiewa co godzinę z kościoła Mariackiego', 'Z tureckiego - gotujesz w nim wodę na herbatę', 'Z niemieckiego - bułka \'cesarska\'', 'Z francuskieg - sos z zasmażki, mleka i źółtek', 'Z francuskiego - sukienka o kroju koszuli'];
 
 const shownWord = document.querySelector('.word');
 const userInput = document.querySelector('input');

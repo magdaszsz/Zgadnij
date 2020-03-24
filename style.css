@@ -14,7 +14,6 @@
 .container {
 	height: 40%;
 	width: 40%;
-	border: 2px solid white;
 	display: flex;
 	flex-direction: column;
 	margin: 0 auto;
@@ -38,7 +37,6 @@
 .word {
 	width: 80%;
 	height: 10vh;
-	//border: 2px solid green;
 	margin-bottom: 20px;
 	text-align: center;
 }
@@ -55,7 +53,6 @@ h1 {
 	height: 50px;
 	width: 70%;
 	font-size: 14px;
-	//border: 2px solid red;
 	text-align: center;
 	margin-bottom: 5%;
 }
@@ -63,13 +60,11 @@ h1 {
 .playing-field {
 	width: 100%;
 	margin: 0 auto;
-	//border: 2px solid yellow;
 	position: relative;
 	height: 40px;
 }
 
 .playBtn {
-	//width: 20%;
 	padding: 10px 20px;
 	margin: 0 auto;
 	background: #f26157;
@@ -100,7 +95,6 @@ input {
 	left: 50%;
 	transform: translateX(-50%);
 	border-radius: 10px;
-	border: 2px solid lightgrey;
 }
 
 input:focus {
@@ -144,14 +138,12 @@ input:focus {
 	background: #f26157;
 	top: 35%;
 	left: 15%;
-	//transform: translate(-50%, -50%);
 	height: 30%;
 	width: 70%;
 	border-radius: 10px;
 	color: white;
 	font-size: 20px;
 	transition: all .5s;
-	//margin-left: -100%;
 	transform: scale(0);
 	border: 2px solid white;
 }
