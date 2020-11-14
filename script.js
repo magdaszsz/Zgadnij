@@ -1,5 +1,5 @@
 const words = ['szezlong', 'szlafrok', 'awokado', 'czekolada', 'hejnał', 'czajnik', 'kajzerka', 'beszamel', 'szmizjerka'];
-const hints = ['Słowo z francuskiego oznaczające \'długie krzesło\'', 'Słowo z niemieckiego oznaczające \'marynarka do spania\'', 'Ten superfood stał się żyłą złota dla południowoamerykańskich karteli', 'Z języka nahuatl - może być biała, deserowa, nadziewana', 'Z węgierskiego - robrzmiewa co godzinę z kościoła Mariackiego', 'Z tureckiego - gotujesz w nim wodę na herbatę', 'Z niemieckiego - bułka \'cesarska\'', 'Z francuskieg - sos z zasmażki, mleka i źółtek', 'Z francuskiego - sukienka o kroju koszuli'];
+const hints = ['Słowo z francuskiego oznaczające \'długie krzesło\'', 'Słowo z niemieckiego oznaczające \'marynarka do spania\'', 'Ten superfood stał się żyłą złota dla południowoamerykańskich karteli', 'Z języka nahuatl - może być biała, deserowa, nadziewana', 'Z węgierskiego - robrzmiewa co godzinę z kościoła Mariackiego', 'Z tureckiego - gotujesz w nim wodę na herbatę', 'Z niemieckiego - bułka \'cesarska\'', 'Z francuskiego - sos z zasmażki, mleka i żółtek', 'Z francuskiego - sukienka o kroju koszuli'];
 
 const shownWord = document.querySelector('.word');
 const userInput = document.querySelector('input');
@@ -53,8 +53,6 @@ userInput.addEventListener('keydown', function(e) {
   }
  })
 
-
-
 button.addEventListener('click', function() {
   if(!clicked) {
     clicked = true;
@@ -68,8 +66,6 @@ button.addEventListener('click', function() {
 })
 
 let pair = [];
-
-
 let scrambledWord = '';
 
 /************** get a random word and a hint *****/
@@ -93,6 +89,7 @@ const displayWords = function() {
   }
 
 /********* check if the anwser is correct**************/
+
 const checkAnwser = function() {
   if(userInput.value === pair[0]) {
     word.innerHTML = `<h1>${pair[0]}</h1`;
@@ -115,6 +112,3 @@ const checkAnwser = function() {
     game.classList.add('show');
   }
 }
-
-
-

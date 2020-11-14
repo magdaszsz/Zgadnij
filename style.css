@@ -95,6 +95,7 @@ input {
 	left: 50%;
 	transform: translateX(-50%);
 	border-radius: 10px;
+	z-index: 0;
 }
 
 input:focus {
@@ -146,6 +147,7 @@ input:focus {
 	transition: all .5s;
 	transform: scale(0);
 	border: 2px solid white;
+	z-index: 99;
 }
 
 .wrong-container, .blank-container {
